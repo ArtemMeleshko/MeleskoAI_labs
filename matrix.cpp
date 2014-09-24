@@ -18,7 +18,7 @@ Matrix::Matrix(int n, int m):
     m_(m),
     matrix_(0)
 {
-    matrix_=new Data *[n_];
+    matrix_=new Data *[n_];//matrix_=new Data *[n_](); адразу паўсюль запіша нулявы паказальнік
     for (int i=0; i<n_; i++)
     {
         matrix_[i]=0;
@@ -27,6 +27,10 @@ Matrix::Matrix(int n, int m):
 }
 
 Matrix::Matrix(const Matrix &matrixToCopy)
+// :
+// n_(matrixToCopy.n_),
+// m_(matrixToCopy.m_),
+// matrix_(0)
 {
     matrix_=new Data *[getN()];
     for (int i=0; i<getN(); i++)
@@ -117,12 +121,13 @@ Matrix Matrix::operator- (const Matrix &right)
 
 Matrix Matrix::operator* (const Matrix &right)
 {
-    if (n_!=right.m_ ||m_!=right.n_)
+    if (n_!=right.m_ ||m_!=right.n_)// ??? для перамнажэння дастаткова каб m_==right.n_
     {
         cout<<"multiplication is not possible.\n";
         exit(1);
     }
     Matrix result(n_,m_);
+	// некарэетная рэалізацыя
     for (int k=0; k<n_; k++)
         for (int i=0; i<n_; i++)
             for (int j=0; j<m_; j++)

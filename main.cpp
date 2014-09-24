@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <ctime>
 #include <stdlib.h>
 #include "matrix.h"
@@ -28,7 +28,7 @@ int main()
     cout<<" 0 -> exit. \n\n";
     cout<<"action=";
     cin>>a;
-    if (a>=0)
+    if (a>=0)//лішняя праверка
         switch (a)
         {
         case 1:
