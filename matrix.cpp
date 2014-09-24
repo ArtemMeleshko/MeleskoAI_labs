@@ -121,7 +121,7 @@ Matrix Matrix::operator- (const Matrix &right)
 
 Matrix Matrix::operator* (const Matrix &right)
 {
-    if (n_!=right.m_ ||m_!=right.n_)// ??? для перамнажэння дастаткова каб m_==right.n_
+    if (m_!=right.n_)// ??? для перамнажэння дастаткова каб m_==right.n_
     {
         cout<<"multiplication is not possible.\n";
         exit(1);
