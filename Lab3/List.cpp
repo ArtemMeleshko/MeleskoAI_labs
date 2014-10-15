@@ -24,7 +24,7 @@ void List::add()
 	Node* temp = new Node;
 
 	temp->data = new char[len];
-	//for (int i=0; i<len; i++) temp->data[i] ;
+	
 	temp->next = nullptr;
 
 	if (head == nullptr)
