@@ -7,15 +7,15 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
+    
     int h,r;
     float l;
     double v, S;
     double pi=3.14159265358979323846;
-    cout << "Введите радиус и выоту \n";
+    cout << "Enter the radius and height \n";
     cin >> r >> h;
     v =  (pow(r,2) * h * pi )/3 ;
-    cout << "Объем = ";
+    cout << "Scope  = ";
     printf( "%.2f", v );
     cout << endl;
 
@@ -23,7 +23,7 @@ int main()
 
     l = sqrt(pow(r,2)+pow(h,2));
 
-    cout << "Площадь = ";
+    cout << "Area = ";
     S = pi*r*r + pi*r*l;
     printf( "%.3f", S );
 
