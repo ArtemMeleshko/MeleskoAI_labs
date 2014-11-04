@@ -2,10 +2,10 @@ MeleskoAI_labs
 ==============
  Lab_2 -> 4
  
- Lab_3 ->
+ Lab_3 -> 7п
  
- Lab_4 ->
+ Lab_4 -> Р
  
- Lab_5 ->
+ Lab_5 ->2л
  
  Lab_6 ->
