@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Left will go lose myself , right on - going lose your horse , you will go directly inanimate will  "<< endl;
+    cout <<"1. Left"<< endl
+         <<"2. Right" << endl
+         <<"3. Forward"<<endl;
+    int a;
+    cin >> a;
+
+    switch (a)
+    {
+    case 1:
+        cout<<"Gypsies stole you ";
+        break;
+    case 2:
+        cout<<"Gypsies stole your horse ";
+        break;
+    case 3:
+        cout<<"Gypsies stole your life ";
+        break;
+    default:
+        cout<<"Gypsies are angry at the wrong input ";
+        break;
+        return 0;
+    }
+}
