@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,result;
+    char zn='?';
+    while (zn!='1')
+    {
+        cin>>a>>zn>>b;
+        switch (zn)
+        {
+        case '-':
+            result=a-b;
+            break;
+        case '+':
+            result=a+b;
+            break;
+        case '*':
+            result=a*b;
+            break;
+        case '/':
+            result=a/b;
+            break;
+        case '%':
+            result=a%b;
+            break;
+        default:
+            result=-1;
+        }
+        cout<<"result="<<result<<endl;
+    }
+}
