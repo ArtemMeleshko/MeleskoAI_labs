@@ -4,6 +4,15 @@
 class List::implimentation
 {
 public:
+    
+    Implementation()noexcept;
+	Implementation(const Implementation &other);
+	Implementation(Implementation &&other)noexcept;
+	Implementation &operator=(const Implementation &other);
+	Implementation &operator=(Implementation &&other)noexcept;
+	~Implementation() noexcept;
+	
+	
     void add;
     void show;
     void put(char c, int pos);
