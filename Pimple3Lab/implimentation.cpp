@@ -2,6 +2,42 @@
 #include <iostream>
 
 using namespace std;
+List::implementation::implementation()noexcept:
+head(nullptr)
+{}
+
+List::implementation::implementation(const implementation &other):
+    head(nullptr)
+{
+    copy(other.head);
+}
+List::implementation::implementation(implementation &&other)noexcept:
+head(nullptr)
+{
+    swap(head, other.head);
+}
+
+List::implementation &List::implementation::operator=(const implementation &other)
+{
+    if(this != &other)
+    {
+        clear();
+        copy(other.head);
+    }
+
+    return *this;
+}
+
+List::implementation &List::implementation::operator=(implementation && other)noexcept
+{
+    swap(head, other.head);
+    return *this;
+}
+
+List::implementation::~implementation() noexcept
+{
+    clear();
+}
 
 List::implimentation::List(int l): len(l), head(nullptr)
 {}
