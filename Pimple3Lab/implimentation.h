@@ -6,10 +6,10 @@ class List::implimentation
 public:
     
         implementation()noexcept;
-	implementation(const Implementation &other);
+	implementation(const implementation &other);
 	implementation(Implementation &&other)noexcept;
-	implementation &operator=(const Implementation &other);
-	implementation &operator=(Implementation &&other)noexcept;
+	implementation &operator=(const implementation &other);
+	implementation &operator=(implementation &&other)noexcept;
 	~implementation() noexcept;
 	
 	
