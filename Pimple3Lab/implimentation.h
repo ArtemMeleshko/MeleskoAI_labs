@@ -19,5 +19,9 @@ public:
     chat get(int pos);
     bool del;
 private:
-    ...
+    struct Node
+{
+	char* data;
+	Node* next;};
+
 };
