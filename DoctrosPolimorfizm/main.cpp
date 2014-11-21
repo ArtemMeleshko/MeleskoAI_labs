@@ -14,55 +14,84 @@ using namespace std;
 class Doctors
 {
 public:
-
+    Doctors () {};
     Doctors (const Doctors &a)  = delete;
     Doctors &operator=(const Doctors&a)=delete;
     Doctors (Doctors &&a)=delete;
     Doctors &operator=(const Doctors &&a)=delete;
     virtual ~Doctors () {}
+    int problems()
+    {
+        return k;
+    }
+    virtual string name() = 0;
 
-    virtual void problems(string s)=0;
-
-
+protected:
+    int k;
+    string n;
 };
 
 class Terapevt: public Doctors
-{   public: Terapevt(string s){};
-    private : void problems(string s)
+{
+public:
+    Terapevt() : Doctors()
     {
-     cout << "cure you Terapevt ";
+        k = 1;
+    }
+
+    string name()
+    {
+        return "Terapevt";
     }
 };
 class Travmotolog: public Doctors
-{   public: Travmotolog() {};
-    void problems(string s)
+{
+public:
+    Travmotolog(): Doctors()
     {
-        cout<<"cure you Travmatolog" ;
+        k = 2;
     }
-
-
+    string name()
+    {
+        return "Travmotolog";
+    }
 };
 
 class Okylist: public Doctors
-{   public: Okylist() {};
-    void problems(string s)
+{
+public:
+    Okylist(): Doctors()
     {
-      cout << "cure you Okylist " ;
+        k = 3;
+    }
+    string name()
+    {
+        return "Okylist";
     }
 };
 
 class Stomatolog: public Doctors
-{   public: Stomatolog() : Doctors() {};
-    void problems(string s)
+{
+public:
+    Stomatolog(): Doctors()
     {
-    cout << "cure you Stomatolog ";
+        k = 4;
+    }
+    string name()
+    {
+        return "Stomatolog";
     }
 };
 class Xiryrg: public Doctors
-{   public: Xiryrg() {};
-    void problems(string s)
-    {cout << "cure you Xiryrg ";
-
+{
+public:
+    Xiryrg(): Doctors()
+    {
+        k = 5;
+    };
+    string name()
+    {
+        return "Xiryrg";
     }
 
 };
@@ -77,28 +106,26 @@ int main()
         new Terapevt() ,
         new Travmotolog(),
         new Okylist(),
-        new Stomotolog(),
+        new Stomatolog(),
         new Xiryrg()
     };
-    cin >> a;
-    switch(a)
+
+    //cin >> a;
+
+    int problem;
+    cout << "Enter number your problem: ";
+    cin >> problem;
+
+    for (int i = 0; i < 5; i++)
     {
-
-    case 1:
-        doc[0].problems("Throat");
-        break;
-    case 2:
-        doc[1].problems("Body");
-        break;
-    case 3:
-        doc[2].problems("Eyes");
-        break;
-    case 4:
-        doc[3].problems("Teeth");
-        break;
-    case 5:
-        doc[4].problems("Stomach");
-        break;
-
+        if (problem == doc[i]->problems())
+        {
+            cout << "Doctor " << doc[i]->name() << " said: I will help you\n";
+        }
+        else
+        {
+            cout <<"Doctor " << doc[i]->name() << " said: I can't fix you\n";
+        }
     }
+
 }
