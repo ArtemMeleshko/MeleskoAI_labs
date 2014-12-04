@@ -20,7 +20,7 @@ bool operator () (int a)
      return a>value;
      }
 private:
-     int value;
+     int value;// TODO а дзе вы ініцыалізуеце value?
 };
 
 int main()
@@ -44,3 +44,5 @@ int main()
         << " number divisible by 4." << endl;
 
 }
+
+// і фарматуйце калі ласка код
