@@ -4,7 +4,7 @@
 #include "List.h"
 
 
-class Stack : public List
+class Stack : public List// нашто вам тут наследванне? TODO гэта не адпавядае умовам лабараторнай
 {
 
 	const int length = 4;
