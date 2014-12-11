@@ -20,6 +20,7 @@ class List
 public:
 	int len;
 	List(int l=1024);
+	// TODO канструктары капіравання і перамешчэння, адпаведныя аператары прысваення
 	~List();
 	void add();
 	bool del();
