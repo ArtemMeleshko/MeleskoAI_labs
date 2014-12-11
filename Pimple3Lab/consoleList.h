@@ -9,7 +9,7 @@ public:
 	consoleList (const consoleList  &other);
 	consoleList (consoleList  &&other)noexcept;
   consoleList &operator=(const consoleList  &other);
-	CconsoleList  &operator=(consoleList  &&other)noexcept;
+	CconsoleList  &operator=(consoleList  &&other)noexcept;// TODO вы калі капіруеце дык хоць выпраўляйце
 	virtual ~ConsoleEightLike() noexcept;
 
 	

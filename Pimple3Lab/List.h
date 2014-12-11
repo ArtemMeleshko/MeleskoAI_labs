@@ -1,6 +1,6 @@
 #ifndef LIST_H_INCLUDED
 #define LIST_H_INCLUDED
-#include <iostream>
+#include <iostream>//нашто вам тут iostream?
 #include <cstddef>
 using namespace std;
 
@@ -26,7 +26,7 @@ public:
     List(List &&oter);
     List& operator=(List&&oter);
 	
-	int len;
+	int len;//TODO ніякіх адкрытых дадзеных, гэта C++, а не D альбо С#
 	List(int l=1024);
 	~List();
 	void add();
