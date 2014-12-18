@@ -20,7 +20,7 @@ class List
 public:
 	int len;
 	List(int l=1024);
-	List& operator=(const List &obj);
+	List& operator=(const List &obj);//TODO рэалізаваць іх
 	List(const List& obj);
 	List(List &&obj);
 	List& operator=(List &&obj);
