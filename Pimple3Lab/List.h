@@ -1,12 +1,5 @@
 #ifndef LIST_H_INCLUDED
 #define LIST_H_INCLUDED
-#include <iostream>//нашто вам тут iostream?
-#include <cstddef>
-using namespace std;
-
-
-
-
 
 class List
 
@@ -16,19 +9,16 @@ private:
     implimentation *pimpl;
 
 protected:
-    void printElements(PositionedData * array, int size)const;
+        void printElements(PositionedData * array, int size)const;
 	Node* head = nullptr;
 public:
-    List();
-    ~List();
-    List& operator=(const List &other);
-    List(const List &oter);
-    List(List &&oter);
-    List& operator=(List&&oter);
+        List();
+        ~List();
+        List& operator=(const List &obj);
+	List(const List& obj);
+	List(List &&obj);
+	List& operator=(List &&obj);
 	
-	int len;//TODO ніякіх адкрытых дадзеных, гэта C++, а не D альбо С#
-	List(int l=1024);
-	~List();
 	void add();
 	bool del();
 	void show();
