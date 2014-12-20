@@ -7,18 +7,18 @@ using namespace std;
 consoleList::consoleList():
     List()
 {}
-consoleList()::ConsoleList(const ConsoleList &other):
+consoleList()::ConsoleList(const ConsoleList &obj):
     List(other)
 {}
-consoleList::consoleList(consoleList &&other)noexcept:
+consoleList::consoleList(consoleList &&obj)noexcept:
 List (other)
 {}
 
-consoleList &consoleList::operator=(const consoleList &other)
+consoleList &consoleList::operator=(const consoleList &obj)
 {
     return *this;
 }
-consoleList &consoleList::operator=(const consoleList &other)noexcept
+consoleList &consoleList::operator=(const consoleList &obj)noexcept
 {
     return *this;
 }
