@@ -6,11 +6,11 @@ class consoleList: public List
 public:
 	
 	consoleList()noexcept;
-	consoleList (const consoleList  &other);
-	consoleList (consoleList  &&other)noexcept;
-  consoleList &operator=(const consoleList  &other);
-	CconsoleList  &operator=(consoleList  &&other)noexcept;// TODO вы калі капіруеце дык хоць выпраўляйце
-	virtual ~ConsoleEightLike() noexcept;
+	consoleList (const consoleList  &obj);
+	consoleList (consoleList  &&obj)noexcept;
+        consoleList &operator=(const consoleList  &obj);
+	consoleList  &operator=(consoleList  &&obj)noexcept;
+	virtual ~consoleList() noexcept;
 
 	
 	void output()const;
