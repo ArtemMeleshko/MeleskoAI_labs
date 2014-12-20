@@ -4,8 +4,50 @@
 List::List(int l): len(l), head(nullptr)
 {}
 
+
+List& List:: operator=(const List &obj)
+{
+	if (this != &obj)
+	{
+		this->head = nullptr;
+		
+		this->curr = 0;
+		Node *p = obj.head;
+		while (p)
+		{
+			add();
+			p = p->next;
+		}
+		return *this;
+
+	}
+
+}
+List::List(const List& obj)
+{
+	this->head = nullptr;
+	this-> curr = 0;
+	Node *p=obj.head;
+	while (p != nullptr)
+	{
+		add();
+		p = p->next;
+   }
+
+}
+
+List::List(List &&obj)
+{
+	this->head = std::move(obj.head);
+}
+List& List:: operator=(List &&obj)
+{
+	std::swap(obj.head, head);
+	return *this;
+}
 List::~List()
 {
+	
 	Node* p = head;
 	Node * q;
 	while (p != nullptr)
@@ -24,7 +66,7 @@ void List::add()
 	Node* temp = new Node;
 
 	temp->data = new char[len];
-	
+	for (int i=0; i<len; i++) temp->data[i] = '.';
 	temp->next = nullptr;
 
 	if (head == nullptr)
@@ -64,7 +106,7 @@ bool List::del()
         if (q == nullptr) {
             head = nullptr;
         }
-        else {  -
+        else {  
             q->next = nullptr;
         }
         return true;
@@ -122,4 +164,5 @@ char List::get(int pos)
 	}
 	return 0;
 }
+
 
