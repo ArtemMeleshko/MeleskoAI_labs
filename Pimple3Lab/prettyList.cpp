@@ -2,20 +2,20 @@
 #include "prettyList.h"
 #include <iostream>
 
-prettyList::prettyList(const prettyList &other):
-    consoleList(other)
+prettyList::prettyList(const prettyList &obj):
+    consoleList(obj)
 {}
 
-prettyList::prettyList(prettyList &&other)noexcept:
-consoleLits(other)
+prettyList::prettyList(prettyList &&obj)noexcept:
+consoleLits(obj)
 {}
 
-prettyList &&prettyList::operator=(const prettyList &other)
+prettyList &&prettyList::operator=(const prettyList &obj)
 {
     return *this;
 }
 
-prettyList &prettyList::operator=(prettyList && other)noexcept
+prettyList &prettyList::operator=(prettyList && obj)noexcept
 {
     return *this;
 }
@@ -24,8 +24,12 @@ prettyList &prettyList::operator=(prettyList && other)noexcept
 prettyList::~prettyList() noexcept
 {}
 
-void prettyList::printElements(Position
-edData *array, int size)const
+void prettyList::printElements(PositionedData *array, int size)const
 {
-    ...
+    cout<<"[ ";
+    for(int i=0;i<size;++i)
+    {
+        cout<<array[i]<<" ";
+    }
+    cout<<" ]";
 }
