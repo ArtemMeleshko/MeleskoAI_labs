@@ -1,18 +1,19 @@
+
 #ifndef IMPLIMENTATION_H_INCLUDED
 #define IMPLIMENTATION_H_INCLUDED
 #include "List.h"
 class List::implimentation
 {
 public:
-    
-        implementation()noexcept;
-	implementation(const implementation &other);
-	implementation(Implementation &&other)noexcept;
-	implementation &operator=(const implementation &other);
-	implementation &operator=(implementation &&other)noexcept;
-	~implementation() noexcept;
-	
-	
+
+    implementation()noexcept;
+    implementation(const implementation &obj);
+    implementation(Implementation &&obj)noexcept;
+    implementation &operator=(const implementation &obj);
+    implementation &operator=(implementation &&obj)noexcept;
+    ~implementation() noexcept;
+
+
     void add;
     void show;
     void put(char c, int pos);
@@ -20,9 +21,10 @@ public:
     bool del;
 private:
     struct Node
-{
-	char* data;
-	Node* next;};
+    {
+        char* data;
+        Node* next;
+    };
 
 };
 
