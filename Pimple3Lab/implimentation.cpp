@@ -6,31 +6,31 @@ List::implementation::implementation()noexcept:
 head(nullptr)
 {}
 
-List::implementation::implementation(const implementation &other):
+List::implementation::implementation(const implementation &obj):
     head(nullptr)
 {
-    copy(other.head);
+    copy(obj.head);
 }
-List::implementation::implementation(implementation &&other)noexcept:
+List::implementation::implementation(implementation &&obj)noexcept:
 head(nullptr)
 {
-    swap(head, other.head);
+    swap(head, obj.head);
 }
 
-List::implementation &List::implementation::operator=(const implementation &other)
+List::implementation &List::implementation::operator=(const implementation &obj)
 {
-    if(this != &other)
+    if(this != &obj)
     {
         clear();
-        copy(other.head);
+        copy(obj.head);
     }
 
     return *this;
 }
 
-List::implementation &List::implementation::operator=(implementation && other)noexcept
+List::implementation &List::implementation::operator=(implementation && obj)noexcept
 {
-    swap(head, other.head);
+    swap(head, obj.head);
     return *this;
 }
 
@@ -149,7 +149,7 @@ char List :: implimentation :: get(int pos)
 		Node * q = nullptr;
 		while (p->next != nullptr)
 		{
-            q = p;
+                        q = p;
 			p = p->next;
 		}
 		if (pos >= 0) return p->data[pos];
