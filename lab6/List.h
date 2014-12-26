@@ -1,8 +1,8 @@
 #ifndef LIST_H_INCLUDED
 #define LIST_H_INCLUDED
 #include <iostream>
-//#include <exeption>
-#include "exeption.h"
+//#include <exception>
+#include "exception.h"
 
 template < typename Data> struct Nod
 {
