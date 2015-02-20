@@ -1,0 +1,46 @@
+//*****//Hello World
+/*public class wag {
+	public static void main(String args[])
+	{    for(int i = 0 ; i < 5 ; i++){
+	
+		System.out.println("Hello World!!");
+	}}
+
+}*/
+//*****//Stroka s dopolneniem
+/*import java.util.*;
+public class wag {
+	public static void main(String args[])
+	{   			
+		System.out.println("Введите вашу строку!!");
+		Scanner scn = new Scanner(System.in);
+		String s = scn.nextLine();
+		System.out.println(s);
+		System.out.print("Вот ваша строка!!");
+
+
+
+	}
+
+}*/
+//*****// Factorial
+import java.util.*;
+public class wag {
+	public static void main(String args[])
+{
+		int i;
+		int x = 1;
+		System.out.println("Введите ваше число");
+		Scanner scn = new Scanner(System.in);
+		i = scn.nextInt();
+		for( int n = 1 ; n < i+1; ++n)
+		{
+			x *= n;
+			
+		}
+		
+		System.out.println(x);
+
+
+}
+}
